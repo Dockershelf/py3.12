@@ -1,12 +1,33 @@
-[![Build Status](https://github.com/deadsnakes/py3.12/actions/workflows/main.yml/badge.svg)](https://github.com/deadsnakes/py3.12/actions/workflows/main.yml)
+# py3.12
 
-py3.12
-======
+Debian packaging for CPython 3.12: patches, `debiandirs/`, and changelog tracks used by the [Dockershelf python-pipeline](https://github.com/Dockershelf/python-pipeline).
 
-[mainline] and [nightly] builds are current supported for:
+## Supported Debian suites
 
-- jammy
-- resolute
+- `trixie`
+- `unstable`
 
-[mainline]: https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa
-[nightly]: https://launchpad.net/~deadsnakes/+archive/ubuntu/nightly
+Packaging trees live under `debiandirs/<suite>/`. Changelog tracks:
+
+- **mainline** — `changelogs/mainline/<suite>`
+- **nightly** — `changelogs/nightly/<suite>`
+
+## Build (from workspace)
+
+Clone this repo as a sibling of `python-pipeline/`, then from `python-pipeline/`:
+
+```bash
+make materialize PY=3.12 DIST=trixie
+make build PY=3.12 DIST=trixie
+```
+
+See the [operations manual](https://github.com/Dockershelf/python-pipeline/blob/main/docs/operations.md) for new lines, version bumps, and new suites.
+
+## Layout
+
+| Path | Purpose |
+|------|---------|
+| `cpython/` | Upstream CPython git submodule |
+| `patches/` | Quilt series applied at materialize |
+| `debiandirs/` | Per-suite Debian packaging (`trixie`, `unstable`) |
+| `changelogs/` | `mainline` and `nightly` dch history per suite |
