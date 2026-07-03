@@ -1,3 +1,9 @@
+python3.12 (3.12.13-1+trixie3) trixie; urgency=medium
+
+  * Replace mime-support with media-types for libpython3.12-stdlib.
+
+ -- Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>  Fri, 03 Jul 2026 17:10:00 +0000
+
 python3.12 (3.12.13-1+trixie2) trixie; urgency=medium
 
   * Rebrand packaging metadata for Dockershelf.
