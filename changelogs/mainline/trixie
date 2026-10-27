@@ -1,3 +1,9 @@
+python3.12 (3.12.16-1+trixie1) trixie; urgency=medium
+
+  * Update to v3.12.16.
+
+ -- Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>  Tue, 27 Oct 2026 09:43:30 +0000
+
 python3.12 (3.12.15-1+trixie1) trixie; urgency=medium
 
   * Update to v3.12.15.
